@@ -26,15 +26,11 @@ def login():
     nextbutton.click()
 
     #HTML
-    cookie = browser.get_cookie('wordpress_logged_in_9b3f1ac684a4401c524e27c6c40e95d5')['value']
+    cookie = browser.get_cookies()[1]['value']
     print('Ten User vua Login: ')
     print(cookie.split('%')[0])
 
-
     time.sleep(1000)
-
-
-
 
 if __name__ == '__main__':
     login()
